@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OUTPUT · Centre for Contemporary Art</title>
+  <meta name="description" content="Contemporary art in a former power station. See what's on, plan a visit around the time you have, and book a timed ticket." />
+  <meta name="theme-color" content="#0d0d0d" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Crect x='8' y='8' width='16' height='16' fill='none' stroke='%23d4ff3a' stroke-width='4'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="mock-bar" role="note">
+    <a class="mock-back" href="/portfolio/"><span aria-hidden="true">←</span> Portfolio</a>
+    <strong>Prototype</strong>
+    <nav class="mock-tabs" aria-label="Project views">
+      <a href="index.html" aria-current="page">Website</a>
+      <a href="project.html">Project hub</a>
+    </nav>
+  </div>
+
+  <header class="site-head" id="site-head">
+    <a class="logo" href="#main" aria-label="OUTPUT, Centre for Contemporary Art, home">
+      <span class="logo-box" aria-hidden="true"></span>OUTPUT
+    </a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="#whats-on">What's on</a>
+      <a href="#plan">Plan a visit</a>
+      <a href="#access">Access</a>
+      <a class="nav-cta" href="#tickets">Book tickets</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-img" src="img/hero.jpg" alt="" width="1600" height="2400" fetchpriority="high" />
+      <div class="hero-top">
+        <p class="mono">Centre for Contemporary Art<br />Former Northport Power Station</p>
+        <p class="mono status" id="status"><span class="dot" aria-hidden="true"></span><span id="status-text">Open today 10:00–18:00</span></p>
+      </div>
+      <div class="hero-mid">
+        <h1 id="hero-title" class="hero-claim">Art at the scale of a <span class="hl">power station.</span></h1>
+        <div class="hero-actions">
+          <a class="btn btn-signal" href="#tickets">Book a timed ticket <span aria-hidden="true">→</span></a>
+          <a class="btn btn-line-light" href="#plan">I have 90 minutes</a>
+        </div>
+      </div>
+      <p class="wordmark" aria-hidden="true">OUTPUT</p>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Now on</span><span>Ink Weather</span><span>Signal / Noise</span><span>Line of Sight</span><span>Hollow Forms</span><span>Free entry Thursdays 17:00–21:00</span><span>Under-18s always free</span>
+        <span>Now on</span><span>Ink Weather</span><span>Signal / Noise</span><span>Line of Sight</span><span>Hollow Forms</span><span>Free entry Thursdays 17:00–21:00</span><span>Under-18s always free</span>
+      </div>
+    </div>
+
+    <!-- WHAT'S ON -->
+    <section class="sec whats-on" id="whats-on" aria-labelledby="on-title">
+      <div class="sec-head">
+        <p class="mono idx">01</p>
+        <h2 id="on-title">What's on</h2>
+        <p class="sec-sub">Every listing says how long it takes and what to expect: sound, light and whether it suits children.</p>
+      </div>
+
+      <div class="filters">
+        <fieldset class="seg">
+          <legend class="sr-only">Show</legend>
+          <label><input type="radio" name="when" value="now" checked /><span>Now on</span></label>
+          <label><input type="radio" name="when" value="soon" /><span>Coming soon</span></label>
+          <label><input type="radio" name="when" value="all" /><span>All</span></label>
+        </fieldset>
+        <label class="check"><input type="checkbox" id="f-free" /><span>Free to enter</span></label>
+        <label class="check"><input type="checkbox" id="f-calm" /><span>Hide loud or flashing</span></label>
+        <p class="count mono" id="ex-count" aria-live="polite"></p>
+      </div>
+
+      <ol class="ex-list" id="ex-list"></ol>
+      <div class="cursor-img" id="cursor-img" aria-hidden="true"><img alt="" /></div>
+    </section>
+
+    <!-- THE BUILDING (horizontal) -->
+    <section class="building" id="building" aria-labelledby="bld-title">
+      <div class="bld-pin">
+        <div class="bld-intro">
+          <p class="mono idx">02</p>
+          <h2 id="bld-title">Four levels.<br />One turbine hall.</h2>
+          <p>Built in 1931 to light the harbour, closed in 1994, reopened for art in 2019. The building is still the biggest work in the collection.</p>
+          <p class="mono hint" aria-hidden="true">Scroll →</p>
+        </div>
+        <ul class="bld-track" id="bld-track">
+          <li class="bld-card"><img src="img/hall.jpg" alt="Bare concrete hall with a single column and soft daylight" loading="lazy" width="1000" height="1500" /><p class="mono">Level 0</p><h3>Turbine Hall</h3><p>34 metres high. Large commissions and sound installations.</p></li>
+          <li class="bld-card"><img src="img/arches.jpg" alt="Sloping concrete supports under a low ceiling" loading="lazy" width="1000" height="1500" /><p class="mono">Level 0</p><h3>Switch Rooms</h3><p>Small, dark rooms for light and film. Timed entry.</p></li>
+          <li class="bld-card"><img src="img/blocks.jpg" alt="Stacked raw concrete blocks lit from above" loading="lazy" width="1000" height="1333" /><p class="mono">Level 1</p><h3>Boiler House</h3><p>Daylit galleries for painting and photography.</p></li>
+          <li class="bld-card"><img src="img/doorway.jpg" alt="Two silhouetted visitors in front of a glowing doorway" loading="lazy" width="1000" height="1500" /><p class="mono">Level 2</p><h3>Mezzanine</h3><p>Sculpture, with views down into the Turbine Hall.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PLAN -->
+    <section class="sec plan" id="plan" aria-labelledby="plan-title">
+      <div class="sec-head">
+        <p class="mono idx">03</p>
+        <h2 id="plan-title">Plan a visit around your time</h2>
+        <p class="sec-sub">Tell us how long you have. We'll suggest a route that fits, in walking order.</p>
+      </div>
+      <div class="plan-grid">
+        <form class="plan-form" id="plan-form">
+          <fieldset>
+            <legend class="lab">How long have you got?</legend>
+            <div class="seg seg-lg">
+              <label><input type="radio" name="mins" value="45" /><span>45 min</span></label>
+              <label><input type="radio" name="mins" value="90" checked /><span>90 min</span></label>
+              <label><input type="radio" name="mins" value="150" /><span>2½ hours</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="toggles">
+            <legend class="lab">Anything we should plan around?</legend>
+            <label class="check"><input type="checkbox" name="stepfree" /><span>Step-free route</span></label>
+            <label class="check"><input type="checkbox" name="calm" /><span>Avoid loud or flashing</span></label>
+            <label class="check"><input type="checkbox" name="kids" /><span>Visiting with children</span></label>
+          </fieldset>
+        </form>
+        <div class="plan-out">
+          <figure class="plan-map">
+            <svg id="plan-svg" viewBox="0 0 640 400" role="img" aria-labelledby="plan-svg-t"><title id="plan-svg-t">Building cross-section with your route</title></svg>
+          </figure>
+          <div class="route" aria-live="polite">
+            <p class="route-sum" id="route-sum"></p>
+            <ol class="route-list" id="route-list"></ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TICKETS -->
+    <section class="sec tickets" id="tickets" aria-labelledby="tix-title">
+      <div class="sec-head">
+        <p class="mono idx">04</p>
+        <h2 id="tix-title">Book a timed ticket</h2>
+        <p class="sec-sub">Timed entry keeps the galleries calm. Pick a quiet slot and walk straight in. Under-18s are always free.</p>
+      </div>
+
+      <form class="tix" id="tix-form" novalidate>
+        <div class="err-summary" id="tix-errors" role="alert" tabindex="-1" hidden></div>
+
+        <fieldset class="tix-step">
+          <legend><span class="mono">A</span> Day</legend>
+          <div class="days" id="days"></div>
+        </fieldset>
+
+        <fieldset class="tix-step" id="slot-field">
+          <legend><span class="mono">B</span> Entry time</legend>
+          <p class="hint" id="slot-hint">You can stay until closing. Slots marked quiet are under 40% full.</p>
+          <div class="slots" id="slots" aria-describedby="slot-hint"></div>
+          <p class="err" id="slot-err" hidden></p>
+        </fieldset>
+
+        <fieldset class="tix-step" id="type-field">
+          <legend><span class="mono">C</span> Tickets</legend>
+          <div class="types" id="types"></div>
+          <p class="err" id="type-err" hidden></p>
+          <div class="field" id="member-wrap" hidden>
+            <label for="member-no">Membership number</label>
+            <input id="member-no" name="member" autocomplete="off" inputmode="text" placeholder="OUT-123456" aria-describedby="member-hint member-err" />
+            <p class="hint" id="member-hint">On your card or in the welcome email. Starts with OUT-.</p>
+            <p class="err" id="member-err" hidden></p>
+          </div>
+        </fieldset>
+
+        <aside class="tix-sum" aria-labelledby="sum-title">
+          <h3 id="sum-title" class="mono">Your booking</h3>
+          <dl id="sum-lines"></dl>
+          <p class="sum-total"><span>Total</span><output id="sum-total">€0</output></p>
+          <button class="btn btn-signal btn-block" type="submit">Book tickets</button>
+          <p class="hint">Free cancellation until your entry time. Pay now by card or at the desk.</p>
+        </aside>
+      </form>
+    </section>
+
+    <!-- ACCESS -->
+    <section class="sec access" id="access" aria-labelledby="acc-title">
+      <div class="sec-head">
+        <p class="mono idx">05</p>
+        <h2 id="acc-title">Access &amp; sensory guide</h2>
+        <p class="sec-sub">An old power station can be loud, dark and big. Here's what to expect and how we help.</p>
+      </div>
+      <ul class="acc-grid">
+        <li><h3>Step-free</h3><p>Lifts reach levels 0 to 2. The roof terrace is stairs only, so we show its view on screens in the café.</p></li>
+        <li><h3>Quiet hour</h3><p>Sundays 10:00–11:00: sound installations off, lights steady, half capacity.</p></li>
+        <li><h3>Ear defenders</h3><p>Free to borrow at the desk and at the Turbine Hall entrance. Signal / Noise peaks at 85 dB.</p></li>
+        <li><h3>Flashing lights</h3><p>Line of Sight uses strobe. It's in a closed room with a warning at the door, so you can skip it easily.</p></li>
+        <li><h3>Companions go free</h3><p>Bring a carer or companion at no cost. Add them at the desk; no proof needed.</p></li>
+        <li><h3>Seats everywhere</h3><p>Folding stools at every entrance, and benches in each gallery.</p></li>
+      </ul>
+    </section>
+
+    <section class="closing" aria-labelledby="close-title">
+      <img src="img/circle.jpg" alt="" loading="lazy" width="1600" height="900" />
+      <div class="closing-in">
+        <h2 id="close-title">Thursdays are free after five.</h2>
+        <p>Late opening until 21:00, with a bar in the Turbine Hall. Book a free slot so you don't queue.</p>
+        <a class="btn btn-signal" href="#tickets" data-thursday>Book a free Thursday slot <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="foot-grid">
+      <div>
+        <p class="foot-logo">OUTPUT</p>
+        <p>Turbine Quay 1<br />Northport</p>
+      </div>
+      <div>
+        <h2 class="mono">Opening hours</h2>
+        <p>Tue–Sun 10:00–18:00<br />Thu until 21:00 (free from 17:00)<br />Closed Mondays</p>
+      </div>
+      <div>
+        <h2 class="mono">Contact</h2>
+        <p><a href="tel:+31100000000">+31 10 000 0000</a><br /><a href="mailto:visit@output.example">visit@output.example</a></p>
+      </div>
+    </div>
+    <p class="foot-note mono">Prototype · UX/UI website concept · Photography from <a href="https://unsplash.com/license">Unsplash</a> (free licence)</p>
+  </footer>
+
+  <dialog class="modal" id="modal" aria-labelledby="m-title">
+    <button class="m-close" type="button" aria-label="Close" data-close>✕</button>
+    <div class="m-inner" id="m-inner"></div>
+  </dialog>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

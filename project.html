@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OUTPUT · Project hub</title>
+  <meta name="description" content="UX case study: redesigning a contemporary art centre's website around timed tickets, visit planning and sensory information." />
+  <meta name="theme-color" content="#0d0d0d" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0d0d'/%3E%3Crect x='8' y='8' width='16' height='16' fill='none' stroke='%23d4ff3a' stroke-width='4'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="mock-bar" role="note">
+    <a class="mock-back" href="/portfolio/"><span aria-hidden="true">←</span> Portfolio</a>
+    <strong>Prototype</strong>
+    <nav class="mock-tabs" aria-label="Project views">
+      <a href="index.html">Website</a>
+      <a href="project.html" aria-current="page">Project hub</a>
+    </nav>
+  </div>
+
+  <header class="hub-cover">
+    <img src="img/dim.jpg" alt="" width="1600" height="591" />
+    <div class="cover-in">
+      <p class="mono">Case study · Arts venue website</p>
+      <h1>From the queue to a <span class="hl">quiet slot.</span></h1>
+      <dl class="cover-meta">
+        <div><dt class="mono">Client</dt><dd>OUTPUT, Centre for Contemporary Art</dd></div>
+        <div><dt class="mono">Role</dt><dd>UX research, UX &amp; UI design</dd></div>
+        <div><dt class="mono">Timeline</dt><dd>7 weeks</dd></div>
+        <div><dt class="mono">Deliverables</dt><dd>Responsive site, ticketing flow, visit planner, sensory guide, design system</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <nav class="phase-nav" aria-label="Project phases">
+    <ol id="phase-nav">
+      <li><a href="#brief"><span class="mono">01</span> Brief</a></li>
+      <li><a href="#research"><span class="mono">02</span> Research</a></li>
+      <li><a href="#define"><span class="mono">03</span> Define</a></li>
+      <li><a href="#ia"><span class="mono">04</span> Structure</a></li>
+      <li><a href="#wireframes"><span class="mono">05</span> Wireframes</a></li>
+      <li><a href="#visual"><span class="mono">06</span> Visual</a></li>
+      <li><a href="#testing"><span class="mono">07</span> Testing</a></li>
+      <li><a href="#handoff"><span class="mono">08</span> Handoff</a></li>
+    </ol>
+  </nav>
+
+  <main id="main">
+    <!-- 01 BRIEF -->
+    <section class="hub-sec" id="brief" aria-labelledby="h-brief">
+      <div class="hub-head"><p class="mono idx">01 · Brief</p><h2 id="h-brief">A world-class room with a twenty-minute queue.</h2></div>
+      <div class="two">
+        <div class="prose">
+          <p class="big">The centre reopened in a former power station and became the city's most-visited gallery in two years. The website didn't keep up.</p>
+          <p>Tickets were buried under "Visit", weekends sold out at the door, and the front desk took dozens of calls a day asking whether the sound installation was loud or the light piece was safe for someone with epilepsy.</p>
+          <p>The brief: move people from walk-up queues to booked, spread-out arrivals, and answer the "what's it like?" questions before anyone has to ask.</p>
+        </div>
+        <figure class="quote">
+          <blockquote>"We have the best room in the city, and people spend their first twenty minutes queuing for it."</blockquote>
+          <figcaption class="mono">Head of visitor experience, kick-off workshop</figcaption>
+        </figure>
+      </div>
+      <ul class="goals">
+        <li><span class="mono">Goal 1</span><b>Booked, not queued</b><p>Most weekend visitors arrive with a timed ticket.</p></li>
+        <li><span class="mono">Goal 2</span><b>Spread the peak</b><p>Move visitors from the 12:00–15:00 crush to quieter slots.</p></li>
+        <li><span class="mono">Goal 3</span><b>No surprises</b><p>Sound, light and access information before you arrive.</p></li>
+      </ul>
+    </section>
+
+    <!-- 02 RESEARCH -->
+    <section class="hub-sec ink" id="research" aria-labelledby="h-research">
+      <div class="hub-head"><p class="mono idx">02 · Research</p><h2 id="h-research">Where the day goes wrong.</h2></div>
+      <p class="note mono">Illustrative data: figures show the research method, not real measurements.</p>
+      <ul class="methods">
+        <li><b>12 months</b><span>of ticket and door-count data</span></li>
+        <li><b>18</b><span>intercept interviews at the entrance</span></li>
+        <li><b>6</b><span>sessions with sensory-sensitive visitors and an access panel</span></li>
+        <li><b>8</b><span>venues compared for ticketing and access content</span></li>
+      </ul>
+
+      <figure class="heat">
+        <figcaption><b>Average entries per hour.</b> Saturday and Sunday peak between 12:00 and 15:00, while weekday mornings sit nearly empty. The building has room; the arrivals don't spread out.</figcaption>
+        <div class="heat-wrap" tabindex="0" role="region" aria-label="Entries per hour table, scrollable">
+          <table class="heat-t" id="heat"></table>
+        </div>
+        <p class="heat-key mono" aria-hidden="true"><span>Quiet</span><i></i><span>Peak</span></p>
+      </figure>
+
+      <ul class="stats">
+        <li><b>31%</b><span>of Saturday walk-ups waited more than 20 minutes</span></li>
+        <li><b>1 in 4</b><span>phone calls asked "is it loud?" or "is there strobe?"</span></li>
+        <li><b>64%</b><span>of visitors had less than two hours</span></li>
+        <li><b>5 clicks</b><span>from the home page to a ticket</span></li>
+      </ul>
+
+      <div class="voices">
+        <figure><blockquote>"I didn't know you could book. I'd have come at eleven."</blockquote><figcaption class="mono">Weekend visitor, in the queue</figcaption></figure>
+        <figure><blockquote>"I need to know about the sound before I'm in the room, not when I'm already in it."</blockquote><figcaption class="mono">Access panel member</figcaption></figure>
+        <figure><blockquote>"We've got an hour and a half before our train. What should we actually see?"</blockquote><figcaption class="mono">Visitor from out of town</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- 03 DEFINE -->
+    <section class="hub-sec" id="define" aria-labelledby="h-define">
+      <div class="hub-head"><p class="mono idx">03 · Define</p><h2 id="h-define">Three visitors, three questions.</h2></div>
+      <ul class="personas">
+        <li>
+          <img src="img/gallery.jpg" alt="" loading="lazy" width="1600" height="1067" />
+          <p class="mono">Persona 1</p><h3>The weekend family</h3>
+          <p class="q">"Will the kids last, and will we have to queue?"</p>
+          <dl><dt>Needs</dt><dd>Quiet slots, free under-18 tickets, a café break in the plan.</dd><dt>Frustration</dt><dd>Arriving at noon on Saturday with a buggy and no booking.</dd></dl>
+        </li>
+        <li>
+          <img src="img/sound.jpg" alt="" loading="lazy" width="1600" height="1067" />
+          <p class="mono">Persona 2</p><h3>The 90-minute visitor</h3>
+          <p class="q">"What's worth seeing in the time I have?"</p>
+          <dl><dt>Needs</dt><dd>Time per exhibition, a route in walking order, what to skip.</dd><dt>Frustration</dt><dd>Spending half the visit finding the good rooms.</dd></dl>
+        </li>
+        <li>
+          <img src="img/laser.jpg" alt="" loading="lazy" width="1600" height="1309" />
+          <p class="mono">Persona 3</p><h3>The sensory-aware visitor</h3>
+          <p class="q">"Is anything loud, dark or flashing, and can I avoid it?"</p>
+          <dl><dt>Needs</dt><dd>Warnings on the listing, a route that avoids triggers, a quiet hour.</dd><dt>Frustration</dt><dd>Finding out at the door, or not at all.</dd></dl>
+        </li>
+      </ul>
+      <ol class="hmw">
+        <li><span class="mono">HMW</span> make booking a slot quicker than joining the queue?</li>
+        <li><span class="mono">HMW</span> nudge people towards quiet times without hiding busy ones?</li>
+        <li><span class="mono">HMW</span> plan a visit around the time someone actually has?</li>
+        <li><span class="mono">HMW</span> warn about sound and light where people decide, not where they arrive?</li>
+      </ol>
+    </section>
+
+    <!-- 04 STRUCTURE -->
+    <section class="hub-sec" id="ia" aria-labelledby="h-ia">
+      <div class="hub-head"><p class="mono idx">04 · Structure</p><h2 id="h-ia">Eight menus became four tasks.</h2></div>
+      <div class="ia">
+        <div>
+          <h3 class="mono">Before</h3>
+          <ul class="tree old">
+            <li>Home</li><li>Exhibitions</li><li>Events</li><li>Learning</li>
+            <li>Visit<ul><li>Hours</li><li>Getting here</li><li>Tickets <em>(3 levels deep)</em></li><li>Accessibility (PDF)</li></ul></li>
+            <li>Shop</li><li>Support us</li><li>About</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="mono">After</h3>
+          <ul class="tree new">
+            <li><b>What's on</b><ul><li>Time needed, sound, light and kids on every listing</li></ul></li>
+            <li><b>Plan a visit</b><ul><li>Route by time available</li><li>Step-free and calm options</li></ul></li>
+            <li><b>Book tickets</b><ul><li>Always one tap away, in the header</li></ul></li>
+            <li><b>Access &amp; sensory guide</b><ul><li>An HTML page, not a PDF</li></ul></li>
+          </ul>
+        </div>
+      </div>
+      <p class="callout">A card sort with 14 visitors put "Is it loud?" under <b>What's on</b>, not Accessibility. So sensory information lives on the listing itself, and the access page goes deeper.</p>
+    </section>
+
+    <!-- 05 WIREFRAMES -->
+    <section class="hub-sec" id="wireframes" aria-labelledby="h-wf">
+      <div class="hub-head"><p class="mono idx">05 · Wireframes</p><h2 id="h-wf">Decide the content before the look.</h2></div>
+      <ul class="wfs">
+        <li>
+          <div class="wf" aria-hidden="true">
+            <div class="wf-bar"></div>
+            <div class="wf-row big"><i></i><i class="t"></i><i class="tag k"></i></div>
+            <div class="wf-row big"><i></i><i class="t"></i><i class="tag"></i></div>
+            <div class="wf-row big"><i></i><i class="t"></i><i class="tag k"></i></div>
+            <div class="wf-row big"><i></i><i class="t"></i><i class="tag"></i></div>
+          </div>
+          <h3>What's on as a list, not a grid</h3>
+          <p>Titles do the work; tags carry time, sound and light. A grid of posters hid the information visitors actually asked for.</p>
+        </li>
+        <li>
+          <div class="wf" aria-hidden="true">
+            <div class="wf-bar"></div>
+            <div class="wf-seg"><i class="on"></i><i></i><i></i></div>
+            <div class="wf-map"><i></i><i class="k"></i><i></i><i class="k"></i></div>
+            <div class="wf-line"></div><div class="wf-line"></div><div class="wf-line s"></div>
+          </div>
+          <h3>Planner: question first</h3>
+          <p>One question ("How long have you got?") and three toggles. The route appears as a numbered list, with a cross-section map as support.</p>
+        </li>
+        <li>
+          <div class="wf" aria-hidden="true">
+            <div class="wf-bar"></div>
+            <div class="wf-days"><i class="on"></i><i></i><i></i><i></i></div>
+            <div class="wf-slots"><i></i><i class="k"></i><i></i><i class="x"></i><i></i><i class="k"></i></div>
+            <div class="wf-sum"></div>
+          </div>
+          <h3>Tickets: day, time, people</h3>
+          <p>Three steps on one page, with a summary that is always visible. Sold-out slots stay on screen, crossed out, so the grid never jumps.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 06 VISUAL -->
+    <section class="hub-sec ink" id="visual" aria-labelledby="h-vis">
+      <div class="hub-head"><p class="mono idx">06 · Visual design</p><h2 id="h-vis">Two colours and a signal.</h2></div>
+      <div class="vis">
+        <div class="swatches">
+          <div class="sw" style="background:#ecebe6;color:#0d0d0d"><b>Paper</b><span class="mono">#ECEBE6</span><span class="mono">Ink on paper 16.3:1</span></div>
+          <div class="sw" style="background:#0d0d0d;color:#ecebe6;outline:1px solid #3b3b37"><b>Ink</b><span class="mono">#0D0D0D</span><span class="mono">Paper on ink 16.3:1</span></div>
+          <div class="sw" style="background:#d4ff3a;color:#0d0d0d"><b>Signal</b><span class="mono">#D4FF3A</span><span class="mono">Ink on signal 16.8:1</span></div>
+        </div>
+        <ul class="rules">
+          <li><b>Signal means "act" or "you are here".</b> It marks the booking button, the selected tab and your route. It is never decoration, and never text on paper (1.03:1).</li>
+          <li><b>Photography stays black and white</b> until you hover or open it. The art provides the colour, not the interface.</li>
+          <li><b>Square corners and visible rules.</b> They echo the building's switchboards and concrete grid.</li>
+        </ul>
+        <div class="type-spec">
+          <p class="spec-a" aria-hidden="true">Aa</p>
+          <div>
+            <p><b>Archivo, expanded 112–125%</b>: headlines and the wordmark. Wide, industrial and very legible at size.</p>
+            <p><b>IBM Plex Mono</b>: labels, times, levels and booking codes. It reads like signage in the building.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 TESTING -->
+    <section class="hub-sec" id="testing" aria-labelledby="h-test">
+      <div class="hub-head"><p class="mono idx">07 · Testing</p><h2 id="h-test">Six people, five tasks, six changes.</h2></div>
+      <p class="note mono">Illustrative data. Moderated sessions on phones, including two participants with sensory sensitivities.</p>
+      <table class="tasks">
+        <caption class="sr-only">Task success before and after changes</caption>
+        <thead><tr><th scope="col">Task</th><th scope="col">Round 1</th><th scope="col">Round 2</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Book two adults and a child for Saturday</th><td><span class="bar" style="--v:67%"></span>4/6</td><td><span class="bar" style="--v:100%"></span>6/6</td></tr>
+          <tr><th scope="row">Find out whether Signal / Noise is loud</th><td><span class="bar" style="--v:50%"></span>3/6</td><td><span class="bar" style="--v:100%"></span>6/6</td></tr>
+          <tr><th scope="row">Plan a 90-minute visit without stairs</th><td><span class="bar" style="--v:33%"></span>2/6</td><td><span class="bar" style="--v:83%"></span>5/6</td></tr>
+          <tr><th scope="row">Pick the quietest slot tomorrow</th><td><span class="bar" style="--v:50%"></span>3/6</td><td><span class="bar" style="--v:100%"></span>6/6</td></tr>
+          <tr><th scope="row">Use a membership ticket</th><td><span class="bar" style="--v:67%"></span>4/6</td><td><span class="bar" style="--v:100%"></span>6/6</td></tr>
+        </tbody>
+      </table>
+      <ol class="changes">
+        <li><b>Percentages became words.</b> "62% full" meant nothing; "Quiet", "Busy" and "12 left" were read instantly.</li>
+        <li><b>Warnings moved to the list.</b> People decided from the list and never opened the detail, so "Loud" and "Flashing light" are now tags on the row.</li>
+        <li><b>The map got a list.</b> Nobody could follow a route from the cross-section alone. The numbered list leads, and the map supports it.</li>
+        <li><b>Sold out stays visible.</b> Hiding full slots made the grid jump and looked like a bug. They're now crossed out and disabled.</li>
+        <li><b>Past times are hidden.</b> On the day, eleven struck-through morning slots pushed the bookable ones off screen.</li>
+        <li><b>A child needs an adult.</b> Two people booked only child tickets. The error now says why, and how to fix it.</li>
+      </ol>
+    </section>
+
+    <!-- 08 HANDOFF -->
+    <section class="hub-sec" id="handoff" aria-labelledby="h-hand">
+      <div class="hub-head"><p class="mono idx">08 · Handoff</p><h2 id="h-hand">What the team got.</h2></div>
+      <ul class="handoff">
+        <li><h3>Design tokens</h3><p>Paper, ink, signal and error colours with contrast notes; type scale with width axis values; spacing on a 4px grid.</p></li>
+        <li><h3>Components</h3><p>Exhibition row, sensory tag, segmented control, day picker, slot card, ticket stepper, error summary, booking dialog.</p></li>
+        <li><h3>Content rules</h3><p>Every listing states time needed, sound and light. Capacity is said in words. Errors say how to fix the problem.</p></li>
+        <li><h3>Analytics</h3><p>Events for planner use, quiet-slot selection, warning-tag views and booking errors, to track the three goals.</p></li>
+      </ul>
+      <div class="roadmap">
+        <h3 class="mono">Phase 2</h3>
+        <ol>
+          <li><b>Live capacity</b> from the door counters, replacing forecast fill.</li>
+          <li><b>In-gallery mode</b> showing the route on your phone, room by room.</li>
+          <li><b>Member accounts</b> with saved tickets and early booking.</li>
+          <li><b>Dutch, German and English</b> content, with plain-language reviews.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="hub-cta" aria-labelledby="h-cta">
+      <h2 id="h-cta">See it working.</h2>
+      <a class="btn btn-signal" href="index.html">Open the website <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+
+  <footer class="site-foot slim"><p class="foot-note mono">Prototype · UX/UI case study · Research figures and test results are illustrative · Photography from <a href="https://unsplash.com/license">Unsplash</a> (free licence)</p></footer>
+
+  <script src="js/project.js" defer></script>
+</body>
+</html>
